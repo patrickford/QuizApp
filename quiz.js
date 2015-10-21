@@ -26,8 +26,11 @@ document.addEventListener('DOMContentLoaded',function(){
     questionEl.innerHTML = "<p>" + quiz.questions[index].question + "</p>";
 
     var answersEl = document.getElementById("answers");
+
     for (var i = 0; i < quiz.questions[index].answers.length; i++) {
-      answersEl.innerHTML += "<button>" + quiz.questions[index].answers[i] + "</button>";
+      answersEl.innerHTML += "<input type='radio' name='answer' value='" + index + "'>" 
+                            + quiz.questions[index].answers[i] 
+                            + "<br>";
     }
   }
 
